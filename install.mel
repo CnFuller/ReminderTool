@@ -1,0 +1,8 @@
+global proc FileLocator(){}; //this is a dummy function, we will ask maya what it is 
+string $fileLocatorInfo = `whatIs FileLocator`;
+
+string $installerPath = `substring $fileLocatorInfo 25 999`;
+
+string $pluginDir = `dirname( $installerPath)`;
+
+string $pluginSrcDir = $pluginDir + "/Final/";
